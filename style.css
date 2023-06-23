@@ -1,0 +1,95 @@
+*{
+    margin:0;
+    padding:0;
+    font-family: 'PT Serif', sans-serif;
+    font-size: medium;
+    font-style: normal;
+}
+html{
+    height: 100%;
+    width: 100%;
+}
+/* Fondo con degradado */
+body{
+    background: linear-gradient(to bottom right,#176B87,#001C30);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 1fr;
+    justify-items: center;
+    gap: 20px;
+}
+
+/* Encabezado y el titulo */
+.header{
+    margin-top: 20px;
+}
+.header h1{
+    font-size: 45px;
+    color: #fff;
+}
+
+/* Arreglo de contenedor */
+.container{
+    display: grid;
+    grid-template-columns: 800px;
+    grid-template-rows: 1fr;
+}
+
+
+/*** ESTILOS BOTÓN GROW BOX ***/
+.container button {
+    background: #DAFFFB; /* color de fondo */
+    color: #001C30; /* color de fuente */
+    width: 300px;
+    font-weight: bold;
+    font-size: 30px;
+    border: 2px solid #176B87; /* tamaño y color de borde */
+    padding: 16px 20px;
+    border-radius: 3px; /* redondear bordes */
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+    justify-self: center;
+}
+.container button:hover {
+  color: #DAFFFB;/* color de fuente hover */
+}
+.container button::after {
+  content: "";
+  background: #001C30; /* color de fondo hover */
+  position: absolute;
+  z-index: -1;
+  padding: 16px 20px;
+  display: block;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  transform: scale(0, 0);
+  transition: all 0.3s ease;
+}
+.container button:hover::after {
+  transition: all 0.3s ease-out;
+  transform: scale(1, 1);
+}
+
+/* subtitulo encima del bloque de nombre */
+.container h2{
+    color: #DAFFFB;
+    margin-top: 20px;
+    font-size: 35px;
+    justify-self: left;
+}
+#blockName{
+    justify-self: center;
+    width: 800px;
+    height: 70px;
+    font-size: 55px;
+    margin-top: 15px;
+    padding-left: 10px;
+    color: #85A389;
+    background-color: #FFFAD7;
+}
